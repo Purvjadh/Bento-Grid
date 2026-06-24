@@ -136,5 +136,5 @@ Clean, readable, and no extra media queries needed!
 
 ## Author
 
-- **GitHub** – [@yourusername](https://github.com/yourusername)
-- **Frontend Mentor** – [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- **GitHub** – [@purvjadh](https://github.com/purvjadh)
+- **Frontend Mentor** – [@purvjadh](https://www.frontendmentor.io/profile/purvjadh)
