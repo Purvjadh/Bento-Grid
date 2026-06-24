@@ -26,7 +26,7 @@ Users should be able to:
 
 ### Screenshot
 
-![Bento Grid Solution](./screenshot.jpg)
+![Bento Grid Solution](./bento-grid-main/design/screenshot.png)
 
 ### Links
 
