@@ -1,0 +1,480 @@
+:root{
+    --clr-primary: hsl(254, 88%, 90%);
+    --clr-bg-purple:hsl(256, 67%, 59%);
+    --clr-body:hsl(0, 0%, 100%);
+    --clr-white:hsla(0, 11%, 89%, 0.945);
+    --clr-text: hsl(0, 0%, 7%);
+    --clr-yellow-100:hsl(31, 66%, 93%);
+    --clr-yellow-500:hsl(39, 100%, 71%);
+    --clr-black-light:hsl(0, 4%, 38%);
+
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+
+    --font-size-xxs:0.725rem;
+    --font-size-xs:0.825rem;
+    --font-size-sm:1rem;
+    --font-size-md:2rem;
+
+    --space-xxs:0.5rem;
+    --space-xs:0.825rem;
+    --space-sm:1.25rem;
+    --space-md:1.5rem;
+    --space-lg:2rem;
+
+    --border-radius:0.425rem;
+
+}
+
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+*:not(dialog) {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Increase line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+
+@font-face {
+    font-family: 'DM Sans';
+    src: url('./fonts/DMSans-VariableFont_opsz\,wght.ttf');
+    font-weight: 100 1000;
+    font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'DM Sans';
+  src: url('./fonts/DMSans-Italic-VariableFont_opsz\,wght.ttf') format('truetype');
+  font-weight: 100 1000;
+  font-style: italic;
+}
+
+.border-radius{
+     border-radius: var(--border-radius);
+}
+
+.base-padding{
+    padding: var(--space-sm) ;
+}
+
+.line-height{
+    line-height: 1;
+}
+
+.gap{
+    margin-top: 0.625rem;
+}
+
+.base-styling{
+    font-weight:600;
+    letter-spacing:-0.9px;
+}
+ 
+main{
+    margin:var(--space-xxs);
+   
+}
+
+
+body{
+    font-family: 'DM Sans', sans-serif;
+    color: var(--clr-text);
+    background-color: var(--clr-white);
+}
+
+.social_media{
+    background-color: var(--clr-bg-purple);
+    color: var(--clr-yellow-100);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.social_media p:first-child{
+    
+    font-size: var(--font-size-md);
+}
+
+.social_media p span{
+    color:var(--clr-yellow-500);
+}
+
+.social_media img{
+    padding-top: var(--space-xs);
+    max-width:150px;
+}
+
+.social_media p:last-child{
+    line-height: 2;
+    font-size: var(--font-size-xxs);
+}
+
+.manage_accounts{
+    background-color: var(--clr-body);
+    font-weight: 500;
+    font-size: clamp(1.25rem,3vw,1.5rem);
+}
+
+.posting_schedule{
+    background-color: var(--clr-yellow-500);
+     padding-right: var(--space-sm);
+    padding-top: var(--space-sm);
+    padding-left: var(--space-sm);
+    font-size: clamp(1.25rem, 3vw, 1.7rem);
+    overflow: hidden;
+    /* border:3px solid black; */
+    display: flex;
+    flex-direction: column;
+    text-wrap: wrap;
+    gap:1rem;
+}
+
+.posting_schedule img{
+    /* max-width: 180px; */
+    align-self: flex-start;  /* keep image left aligned */
+    
+}
+
+.schedule_social_media{
+    /* width:100%; */
+    background-color: var(--clr-primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap:0.625rem;
+    overflow: hidden;
+    font-size: clamp(0.825rem,3vw,1.5rem);
+    /* padding-left: clamp(1rem,3vw,2rem); */
+    padding-left:clamp(1rem,3vw,1.5rem) ;
+    padding-bottom:clamp(1rem,3vw,1.5rem);
+    padding-top:clamp(1rem,3vw,1.5rem);
+}
+
+.schedule_social_media p:last-child{
+    font-size:clamp(0.825rem,3vw,0.925rem) ;
+    font-weight: 500;
+    color:var(--clr-black-light);
+
+}
+
+
+
+.grow_followers{
+    background-color: var(--clr-bg-purple);
+    color:var(--clr-yellow-100);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size:clamp(1.25rem,3vw,2rem);
+    padding: var(--space-xs) var(--space-lg);
+    gap:var(--space-sm);
+}
+
+.grow_followers img{
+    max-width: 150px;
+    
+}
+
+.audience_growth{
+    background-color: var(--clr-body);
+    font-size: var(--font-size-xxs);
+    padding:var(--space-xs);
+}
+
+.audience_growth p:first-child{
+    font-size:clamp(1.25rem,4vw,3rem);
+    font-weight: var(--font-weight-medium);
+     
+}
+
+.audience_growth img {
+    max-width: 120px;
+   
+}
+
+.content_quicker{
+    background-color: var(--clr-yellow-100);
+    font-size:clamp(1.25rem,5vw,2rem);
+    font-weight: 500;
+    padding: 3rem 1rem;
+    letter-spacing: -2px;
+}
+
+.content_quicker img{
+    max-width:150px;
+}
+
+
+.content_quicker em{
+    color: var(--clr-bg-purple);
+}
+
+.content_using_AI{
+    background-color: var(--clr-yellow-500);
+    font-size: clamp(1.25rem,5vw,2rem);
+    font-weight: 500;
+    
+}
+
+.content_using_AI img{
+    max-width:150px;
+    
+}
+
+
+    /* main{
+        display: grid;
+        gap:0.825rem;
+        grid-template-columns:repeat(auto-fill,minmax(250px,1fr));
+    } */
+
+    /* .social_media{
+        grid-column-start: 2;
+        grid-column-end:4;
+    }
+
+    .grow_followers{
+        grid-column-start: 3;
+        grid-column: span 2;
+    } */
+
+main{
+/* --min-col-size: 280px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(var(--min-col-size), 100%), 1fr));
+  gap: 1.5rem; */
+
+  display: grid;
+  gap:1.25rem;
+  
+  grid-template-areas: 
+  'one'
+  'two'
+  'three'
+  'four'
+  'five'
+  'six'
+  'seven'
+  'eight';
+}
+
+.social_media{
+    grid-area: one;
+}
+
+.manage_accounts{
+     grid-area: two;
+}
+
+.posting_schedule{
+    grid-area: three;
+}
+
+.schedule_social_media{
+    grid-area: four;
+}
+
+.grow_followers{
+     grid-area: five;
+}
+
+.audience_growth{
+    grid-area: six;
+}
+
+.content_quicker{
+     grid-area: seven;
+}
+
+.content_using_AI{
+    grid-area: eight;
+}
+
+
+
+@media(min-width:468px){
+    /* .social_media{
+      grid-column-start: 2;
+      grid-column-end: 4;
+    } */
+
+    /* .grow_followers{
+    grid-column-start: 3;
+      grid-column-end: 5;
+    } */
+
+    /* .manage_accounts{
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+
+     .posting_schedule{
+        grid-column-start: 3;
+        grid-column-end: 4;
+    } */
+
+    main{
+        grid-template-areas: 
+        'seven one one four'
+        'seven two three four'
+        'eight two three four'
+        'eight six five five';
+    }
+
+    .posting_schedule .img-container{
+        width:100%;
+        height: 150px;
+        
+    }
+
+    .posting_schedule img{
+        width:100%;
+        height: 100%;
+        object-fit: cover;
+        object-position:top;
+    }
+
+
+
+}
+
+@media(min-width:900px){
+
+    main{
+        margin:3rem;
+    }
+    .content_quicker{
+         line-height: 0.9;
+    }
+    .content_using_AI{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: start;
+        line-height: 0.9;
+    }
+
+    .content_using_AI img{
+        padding-top: var(--space-md);
+    }
+
+    .manage_accounts{
+         line-height: 0.9;
+
+    }
+
+    .audience_growth{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0.1rem;
+    }
+
+    .grow_followers{
+       flex-direction: row;
+       letter-spacing: -0.8px;
+       line-height: 0.8;
+       gap:0.1rem;
+       text-align: start;
+
+    }
+
+    .schedule_social_media .img-container{
+        width:100%;
+        height: 200px;
+        /* position: relative; */
+        /* overflow: hidden; */
+    }
+
+      .schedule_social_media img{
+        width:100%;
+        height:100%;
+        object-fit: cover;
+        object-position:left;
+        /* position:absolute; */
+        /* left: 25%; */
+      }
+
+       .schedule_social_media p{
+        text-align: start;
+      }
+
+
+
+
+
+
+    
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
